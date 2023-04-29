@@ -1,0 +1,156 @@
+:root {
+  --clr-primary: #2874f0;
+}
+
+header {
+  background-color: var(--clr-primary);
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4rem;
+  padding-inline: 4rem;
+  padding-block: 0.4rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.flex > p {
+  margin: 0;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.5em 1em;
+  border: none;
+  outline: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  opacity: 0.8;
+}
+
+.brand {
+  font-size: 28px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  font-size: 20px;
+}
+
+.header-search {
+  flex: 1;
+  border: 2px solid #fff;
+  background-color: transparent;
+  font: inherit;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  color: #fff;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1em;
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+@media (max-width: 350px) {
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.2s ease;
+  display: grid;
+  gap: 1em;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background-color: white;
+}
+
+.like-button {
+  font-size: 1.3em;
+}
+
+.product-img {
+  height: 150px;
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+.product-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.product-description {
+  margin: 0;
+}
+
+.product-description,
+.product-rating {
+  color: #717171;
+}
+
+.product-price {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.product-rating {
+  background-color: #fef54f;
+  color: #9d5800;
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3em;
+}
+
+.product-stock {
+  border-bottom: 2px solid orange;
+}
+
+.product-discount {
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  background-color: #c5ffc5;
+  color: #117d11;
+  font-weight: 600;
+}
+
+.btn[data-type="add-to-cart"] {
+  background-color: #6969ff;
+  color: white;
+  font-weight: 600;
+  align-self: end;
+  justify-self: center;
+}
